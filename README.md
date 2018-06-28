@@ -30,12 +30,4 @@ protected void publishResults(CharSequence charSequence, FilterResults results) 
     notifyDataSetChanged();
 }
 }
-    
-// Bỏ dấu trong string
-public static String removeAccent(String s) {
-    StringBuilder sb = new StringBuilder(s);
-    for (int i = 0; i < sb.length(); i++) {
-        sb.setCharAt(i, removeAccent(sb.charAt(i)));
-    }
-    return sb.toString();
-}
+ 
