@@ -32,7 +32,7 @@ Create a auto complete on listview: <br>
             }
     }
  
- // Bỏ dấu trong string <br>
+Bỏ dấu trong string <br>
  
         public class VNCharacterUtils {
             // Mang cac ky tu goc co dau
