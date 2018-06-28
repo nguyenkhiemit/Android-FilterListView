@@ -77,12 +77,11 @@ public class PersonAdapter extends BaseAdapter implements Filterable {
         protected FilterResults performFiltering(CharSequence charSequence) {
             FilterResults results = new FilterResults();
             if(charSequence != null && charSequence.length() > 0) {
-                charSequence = charSequence.toString().toUpperCase();
+                charSequence = charSequence.toString().toLowerCase();
                 ArrayList<Person> filters = new ArrayList<>();
                 for(int i = 0; i < filterArray.size(); i++) {
-                    if(filterArray.get(i).getName().toUpperCase().contains(charSequence)) {
-                        Person person = new Person(filterArray.get(i).getName(), filterArray.get(i).getImg());
-                        filters.add(person);
+                    if(VNCharacterUtils.removeAccent(filterArray.get(i).getName().toLowerCase()).contains(charSequence)) {
+                        filters.add(filterArray.get(i));
                     }
                 }
                 results.count = filters.size();

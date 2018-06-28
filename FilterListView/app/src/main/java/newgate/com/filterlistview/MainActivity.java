@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         arrayPerson = new ArrayList<>();
 
-        arrayPerson.add(new Person("Steve Jobs", R.drawable.steve));
-        arrayPerson.add(new Person("Billgate", R.drawable.billgate));
-        arrayPerson.add(new Person("Rocker", R.drawable.rocker));
+        arrayPerson.add(new Person("Nguyễn Duy Khiêm", R.drawable.steve));
+        arrayPerson.add(new Person("Steve Jobs", R.drawable.billgate));
+        arrayPerson.add(new Person("Hắc Long - Thiên", R.drawable.rocker));
 
         adapter = new PersonAdapter(this, arrayPerson);
 
